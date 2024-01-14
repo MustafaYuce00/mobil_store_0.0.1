@@ -1,11 +1,21 @@
 import 'package:quiver/core.dart';
 
-
 class LoginData {
-  final String name;
-  final String password;
+  String? name;
+  String? password;
 
   LoginData({required this.name, required this.password});
+
+  LoginData.fromjson(Map<String, dynamic> json) {
+    name = json['name'];
+    password = json['password'];
+  }
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name!.trim();
+    data['password'] = this.password!.trim();
+    return data;
+  }
 
   @override
   String toString() {
@@ -22,4 +32,7 @@ class LoginData {
 
   @override
   int get hashCode => hash2(name, password);
+
+
+  
 }

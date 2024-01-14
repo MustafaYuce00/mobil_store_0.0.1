@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "411813318199",
+    "firebase_url": "https://mobilstore-16316-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mobilstore-16316",
+    "storage_bucket": "mobilstore-16316.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411813318199:android:9f835201e3a5188f5039b2",
+        "android_client_info": {
+          "package_name": "com.example.mobil_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411813318199-qgg9e1hl859t38o5lihiqs0asrca85e7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbMyAJs5qRfCEaUBuchpBthCXsshz1ZY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411813318199-qgg9e1hl859t38o5lihiqs0asrca85e7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "411813318199-2cobvkmvrne2da6dm9rqn675pvi0ag9j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mobilStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

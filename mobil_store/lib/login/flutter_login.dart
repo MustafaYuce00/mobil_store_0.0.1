@@ -14,6 +14,7 @@ import 'package:mobil_store/login/src/models/user_form_field.dart';
 import 'package:mobil_store/login/src/providers/auth.dart';
 import 'package:mobil_store/login/src/providers/login_messages.dart';
 import 'package:mobil_store/login/src/providers/login_theme.dart';
+import 'package:mobil_store/login/src/regex.dart';
 import 'package:mobil_store/login/src/widgets/cards/auth_card_builder.dart';
 import 'package:mobil_store/login/src/widgets/fade_in.dart';
 import 'package:mobil_store/login/src/widgets/gradient_box.dart';
@@ -279,7 +280,7 @@ class FlutterLogin extends StatefulWidget {
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
     this.logoTag,
-    this.userType = LoginUserType.phone, //! email
+    this.userType = LoginUserType.email, //! email
     this.titleTag,
     this.showDebugButtons = false,
     this.loginProviders = const <LoginProvider>[],
@@ -446,14 +447,14 @@ class FlutterLogin extends StatefulWidget {
   final Widget? headerWidget;
 
   static String? defaultEmailValidator(String? value) {
-    if (value == null || value.isEmpty/* || !Regex.email.hasMatch(value)*/) {
-      return 'Geçersiz Telefon!';
+    if (value == null || value.isEmpty || !Regex.email.hasMatch(value)) {
+      return 'Geçersiz mail!';
     }
     return null;
   }
 
   static String? defaultPasswordValidator(String? value) {
-    if (value == null || value.isEmpty || value.length <= 2) {
+    if (value == null || value.isEmpty || value.length <= 5) {
       return 'Parola çok kısa!';
     }
     return null;
